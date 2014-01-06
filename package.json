@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
-    "bundle": "browserify index.js -s tinyElement > dist/tinyelement.js && echo 'Bundled'",
+    "bundle": "node_modules/.bin/browserify index.js -s tinyElement > dist/tinyelement.js && echo 'Bundled'",
     "minify": "node_modules/.bin/uglifyjs dist/tinyelement.js -o dist/tinyelement.min.js -m && echo 'Minified'",
     "build": "npm test && npm run bundle && npm run minify"
   },
