@@ -1,10 +1,13 @@
 {
   "name": "tiny-element",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tiny DOM element selector",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/testling | node_modules/.bin/tspec"
+    "test": "node_modules/.bin/testling | node_modules/.bin/tspec",
+    "bundle": "browserify index.js -s tinyElement > dist/tinyelement.js && echo 'Bundled'",
+    "minify": "node_modules/.bin/uglifyjs dist/tinyelement.js -o dist/tinyelement.min.js -m && echo 'Minified'",
+    "build": "npm test && npm run bundle && npm run minify"
   },
   "repository": {
     "type": "git",

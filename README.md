@@ -5,13 +5,36 @@ A tiny DOM element selector
 [![browser support](https://ci.testling.com/scottcorgan/tiny-element.png)](https://ci.testling.com/scottcorgan/tiny-element)
  
 ## Install
- 
+
+NPM
+
 ```
 npm install tiny-element --save
 ```
- 
+
+Bower
+
+```
+bower install tiny-element --save
+```
+
+```html
+<script src="bower_components/tiny-element/dist/tinyelement.js"></script>
+```
+
 ## Usage
- 
+
+Browser
+
+```js
+var element = window.tinyElement;
+
+var el = element('.parent .some-selector');
+var els = element('.some-elements', true); // This returns an ACTUAL array of DOM elements
+```
+
+Browserify
+
 ```js
 var element = require('tiny-element');
 

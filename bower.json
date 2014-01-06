@@ -1,0 +1,29 @@
+{
+  "name": "tiny-element",
+  "main": "dist/tinyelement.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/scottcorgan/tiny-element",
+  "authors": [
+    "Scott Corgan <scottcorgan@gmail.com>"
+  ],
+  "description": "A tiny DOM element selector",
+  "keywords": [
+    "tiny",
+    "element",
+    "dom",
+    "selector",
+    "querySelector",
+    "querySelectorAll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ".gitignore",
+    "package.json",
+    "index.js"
+  ]
+}
