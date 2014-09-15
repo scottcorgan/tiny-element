@@ -5,5 +5,5 @@ module.exports = function (selector, multiple) {
 
   return (typeof selector == 'string')
     ? (multiple) ? slice.call(ctx.querySelectorAll(selector), 0) : ctx.querySelector(selector)
-    : (selector.length) ? slice.call(selector, 0) : selector;
+    : (selector instanceof Node || selector === window || !selector.length) ? selector : slice.call(selector, 0);
 };
