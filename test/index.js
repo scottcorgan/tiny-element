@@ -52,3 +52,12 @@ test('applies the context passed', function (t) {
   t.equal(el, null, 'out of scope element');
   t.end();
 });
+
+test('wraps to an array if multiple mode passed', function (t) {
+  var el = document.createElement('div');
+
+  var res = element(el, true);
+
+  t.deepEqual(res,[el]);
+  t.end();
+});
